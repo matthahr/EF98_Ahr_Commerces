@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8">
+    <link rel="icon" type="image/png" sizes="16x16" href="istockphoto-1212536194-1024x1024.jpg">
+    <title>Carte des commerces parisiens</title>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.3/dist/leaflet.css" integrity="sha256-kLaT2GOSpHechhsozzB+flnD+zUyjE2LlfWPgU04xyI=" crossorigin=""/>
+    <link rel="stylesheet" href="style.css">
+  </head>
+
+  <body>
+
+    <div id="Menus">
+
+      <div id="menu1">
+        <select id="layer-select">
+          <option value="arrondissements">Arrondissements</option>
+          <option value="quartiers">Quartiers</option>
+        </select>
+      </div>
+
+      <div id="menu2">
+        <select id="type_stat">
+          <option value="dens_surf">Densité surfacique</option>
+          <option value="dens_tot">Part du commerce dans Paris </option>
+        </select>
+      </div>
+
+      <div id="menu3">
+        <select id="type_comm">
+          <option value="tout_comm">Tout type de commerces</option>
+          <option value="boulangerie">Boulangeries-Pâtisseries </option>
+          <option value="restaurant">Restaurants ou Traiteurs </option>
+          <option value="librairie">Librairies </option>
+        </select>
+      </div>
+
+
+      <div id="map" style="width: 720px; height: 390px ;"></div>
+
+      
+      <div id="legend"></div>
+
+      <iframe src="https://opendata.paris.fr/explore/embed/dataset/coronavirus-commercants-parisiens-livraison-a-domicile/table/?disjunctive.code_postal&disjunctive.type_de_commerce&disjunctive.fabrique_a_paris&disjunctive.services&basemap=jawg.dark&location=15,48.85281,2.35155&static=false&datasetcard=false" width="400" height="300" frameborder="0"></iframe>
+      <ods-dataset-context context="coronaviruscommercantsparisienslivraisonadomicile" coronaviruscommercantsparisienslivraisonadomicile-dataset="coronavirus-commercants-parisiens-livraison-a-domicile" coronaviruscommercantsparisienslivraisonadomicile-parameters="{'disjunctive.code_postal':true,'disjunctive.type_de_commerce':true,'disjunctive.fabrique_a_paris':true,'disjunctive.services':true}">
+      <ods-table context="coronaviruscommercantsparisienslivraisonadomicile"></ods-table>
+      
+      </ods-dataset-context>
+
+    </div>
+
+  
+  <script src="https://unpkg.com/leaflet@1.9.3/dist/leaflet.js" integrity="sha256-WBkoXOwTeyKclOHuWtc+i2uENFpDZ9YPdf5Hf+D7ewM=" crossorigin=""></script>
+  
+  <script src="donnees/arrondissements.js"></script>
+  <script src="donnees/quartier_paris.js"></script>
+  <script src="script.js"></script>
+  
+  <script src= "https://code.jquery.com/jquery-3.3.1.min.js"></script>
+  <script src='https://unpkg.com/@turf/turf@6/turf.min.js'></script>
+
+
+</body>
+
+  
+
+</html>
+
+
+
+
